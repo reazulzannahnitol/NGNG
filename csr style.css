@@ -1,0 +1,468 @@
+/* Global Styles */
+body,html {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 44px; /* Adjust this value to match the height of your navbar */
+}
+
+
+
+/* AOS Animation Styling */
+[data-aos] {
+    transition: all 0.5s ease; /* Smooth transition */
+    
+}
+
+
+/*All Section Title Styling */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #04b5c9;
+    margin-bottom: 3px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+/* Horizontal line under the Title */
+.section-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #e0202b;
+    border: none;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.headline-underline{
+    width: 60px;
+    height: 4px;
+    background-color: #eb5204;
+}
+
+
+/* English courses Hero Section Styles */
+.line {
+    width: 600px;
+    height: 3px;
+    background-color: #e0202b;
+    border: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Desktop navigation links styles */
+.navbar-nav .nav-link {
+    font-weight: bolder; /* Make the text bold */
+    font-size: 13px; /* Increase font size (adjust as needed) */
+    color: #056579 !important;
+    padding-right: 15px; /* Add some padding on the right */
+    padding-left: 15px; /* Add some padding on the left */
+    border-right: 1px solid #ccc; /* Add a vertical line (gray) between links */
+}
+/* Additional styles for better spacing */
+.navbar-nav {
+    margin-right: 20px; /* Adjust if needed for spacing between nav links */
+}
+.navbar-nav .nav-item:last-child .nav-link {
+    border-right: none; /* Remove border from the last item */
+}
+.navbar-brand {
+    padding-left: 100px; /* Increase padding on the left to move logo to the right */
+    padding-right: 0;
+    text-align: center;
+}
+
+/* Add media query to ensure it only affects desktop view */
+@media (max-width: 991px) { /* Adjust if necessary */
+    .navbar-brand {
+        padding-left: 0; /* Reset padding for mobile view */
+    }
+}
+.nav-link:hover {
+    color:#e0202b !important;
+    /*border-color: #e0202b;  Change the color of the border on hover */
+}
+
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffffc2 !important; /* Optional: semi-transparent background */
+    border-bottom: 4px solid #33dbeb;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Phone icon styles */
+.navbar-phone-icon {
+    color: #056579; /* Initial color */
+    font-size: 24px; /* Size of the icon */
+    margin-right: auto; /* Pushes the icon to the far left */
+    padding-left: 5px;
+}
+/* Hover effect for the phone icon */
+.navbar-phone-icon:hover {
+    color: #eb5204; /* Color on hover */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 992px) {
+    .navbar .container {
+        display: flex;
+        justify-content: space-between; /* Space between elements */
+        align-items: center; /* Align items vertically */
+    }
+/* Toggle button styles */
+    /* Adjust order and styling for the navbar toggler */
+.navbar-toggler {
+    order: 3; /* Still last in order */
+    margin-right: 20px; /* Push it to the left side */
+    /*background-color: #00f2ff55;  Optional: background color */
+    padding: 0.5rem; /* Reduce padding to make it smaller */
+    border-radius: 50%; /* Make it round */
+    margin-left: auto; /* Pushes the toggle button to the far right */
+    
+}
+
+
+    .navbar-phone-icon {
+        order: 1; /* Phone icon first */
+        display: flex;
+        align-items: center; /* Center vertically */
+        margin-left: 7px;
+    }
+
+    .navbar-brand {
+        order: 2; /* Logo goes second */
+        margin: 0;
+        text-align: center; /* Center text */
+        padding-left: 50px;
+    }
+
+    /* Overlay for mobile menu */
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        display: none; /* Hidden by default */
+    }
+
+    /* Show overlay when navbar is open */
+    .navbar-mobile.open ~ .overlay {
+        display: block; /* Show overlay */
+    }
+}
+
+/* Mobile navigation styles */
+.navbar-mobile {
+    position: fixed; /* Fixed position for mobile navbar */
+    top: 0;
+    right: -250px; /* Initially off-screen */
+    width: 250px; /* Width of mobile navbar */
+    height: 100%; /* Full height */
+    background-color: #009191d7; /* Background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1001; /* Above overlay */
+    background-image: url('nav logo.png'); /* Path to your logo */
+    
+    
+}
+
+/* Mobile navbar list styles */
+.navbar-mobile ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-mobile li {
+    margin: 15px 0; /* Space between items */
+    margin-left: 18px;
+}
+
+.navbar-mobile a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Text color */
+    font-weight: bold; /* Bold text */
+}
+/* Hover effect for mobile navigation links */
+.navbar-mobile a:hover {
+    color: #eb5204; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* Social icons styles */
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center icons */
+    margin-top: 20px; /* Space above icons */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    font-size: 18px; /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #eb5204; /* Color on hover */
+}
+
+/* Close button styles */
+.close-btn {
+    background: #eb5204; /* Background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* Text color */
+    font-size: 15px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    padding: 5px 10px; /* Padding */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon vertically */
+    margin-bottom: 20px; /* Space below */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    margin-top: 40px;
+    margin-left: 18px;
+}
+
+.close-btn:hover {
+    background: #056579; /* Change background on hover */
+}
+/* Mobile submenu */
+.mobile-submenu {
+    list-style-type: none;
+    padding-left: 20px;
+}
+/* Show overlay when navbar is open */
+.navbar-mobile.open ~ .overlay {
+    display: block;
+}
+/* Call Options Container */
+.call-options {
+    position: absolute; /* Absolute positioning */
+    top: 60px; /* Position below the icon */
+    left: 0; /* Align to the left */
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack options vertically */
+    background-color: #f8f9fa; /* Light background for visibility */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for better appearance */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Individual Call Option */
+.call-option {
+    margin: 5px 0; /* Space between options */
+}
+
+.option-link {
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+    transition: color 0.3s; /* Transition effect for color */
+    padding: 10px; /* Padding for clickable area */
+}
+
+/* Option Icons */
+.option-link i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.option-link:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+section {
+    background-color: #fff;
+    padding: 40px;
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal for zoomable images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 90px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 72%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.top{
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+/*All Section Title Styling */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #04b5c9;
+    margin-bottom: 3px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+/* Horizontal line under the Title */
+.section-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #e0202b;
+    border: none;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #1a689e;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    /* Responsive Font Sizes */
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
